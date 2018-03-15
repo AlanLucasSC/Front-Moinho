@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resume - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+    <style>
+      .green:hover{
+        color: #28a745 !important;
+      }
+      .logo{
+        max-width: 100%;
+        height: auto;
+      }
+      .facebook:hover{
+        color: #17a2b8 !important;
+      }
+      .youtube:hover{
+        color: #dc3545 !important;
+      }
+      .blue:hover{
+        color: #17a2b8;
+      }
+      .red:hover{
+        color: #dc3545 !important;
+      }
+      .yellow:hover{
+        color: #e0aa08 !important;
+      }
+      .bg-red{
+        color: #dc3545;
+      }
+      .bg-blue{
+        background-color: #2fc4db;
+      }
+      .drop-login {
+        background-color: #e6e6e6;
+        min-width: 240px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      td.calendar {
+        height: 25px;
+        width: 30px;
+        background: #f5f5f5;					  
+        text-align: center;
+      }
+      .mes {
+        font: bold 12px verdana;
+        background: #f5f5f5;
+        text-align: center;
+        line-height: 25px;							
+        height: 25px;
+        width: 240px;
+      }
+
+      .semana {
+        font: bold 12px verdana;
+      }
+      .dia {
+        height: 23px;
+        width: 30px;
+        padding-top:6px;
+        vertical-align:middle;
+        position:relative;
+      }
+
+      .evento {
+        position: relative;
+        font: 9px verdana;
+        color: #C30;
+        position:absolute;
+        right: -2px;
+        top: -2px;
+      }
+
+      /* Month header */
+      .month {
+          padding: 70px 25px;
+          width: 100%;
+          text-align: center;
+      }
+
+      /* Month list */
+      .month ul {
+          margin: 0;
+          padding: 0;
+      }
+
+      .month ul li {
+          color: white;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+      }
+
+      /* Previous button inside month header */
+      .month .prev {
+          float: left;
+          padding-top: 10px;
+      }
+
+      /* Next button */
+      .month .next {
+          float: right;
+          padding-top: 10px;
+      }
+
+      /* Weekdays (Mon-Sun) */
+      .weekdays {
+          margin: 0;
+          padding: 10px 0;
+          background-color:#ddd;
+      }
+
+      .weekdays li {
+          display: inline-block;
+          width: 13.0%;
+          color: #666;
+          text-align: center;
+      }
+
+      /* Days (1-31) */
+      .days {
+          padding: 10px 0;
+          background: #eee;
+          margin: 0;
+      }
+
+      .days li {
+          list-style-type: none;
+          display: inline-block;
+          width: 13.0%;
+          text-align: center;
+          margin-bottom: 5px;
+          font-size:12px;
+          color: #1d0707;
+      }
+
+      /* Highlight the "current" day */
+      .days li .active {
+          padding: 5px;
+          background: #ffc107;
+          color: white !important
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top" id="sideNav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars text-dark" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a href="#Sobre" class="js-scroll-trigger">
+              <img class="logo" src="img/moinho.png" alt="INSTITUTO MOINHO CULTURAL SUL AMERICANO">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn nav-link" data-toggle="collapse" href="#collapseTeste" role="button" aria-expanded="false" aria-controls="collapseExample"> 
+              <h4 class="blue"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login</h4> 
+            </a>
+            <div class="collapse drop-login" id="collapseTeste">
+                <div class="container">
+                  <form class="subheading " href="./relatorios.html">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre com o seu email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Senha</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+                    <div class="form-check">
+                      <input  type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
+                    </div>
+                    <button type="submit" class="btn btn-info">Entrar</button>
+                  </form>
+                  <br>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="http://www.moinhocultural.org.br/">
+              <h4 class="red">
+                <i class="fa fa-ravelry" aria-hidden="true"></i> Site
+              </h4>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Evento">
+              <h4 class="yellow">
+                <i class="fa fa-calendar" aria-hidden="true"></i> Eventos
+              </h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="Sobre">
+        <div class="">
+          <h1 class="mb-0">
+            Instituto
+            <span class="text-success" > Moinho </span>
+            <span class="text-info" > Cultural </span>
+            <span class="text-danger" > Sul </span>
+            <span class="text-warning" > Americano </span> 
+          </h1>
+          <div class="subheading mb-5">
+            Rua Comendador Domingos Sahib, 300 | Porto Geral | Corumbá/MS - Brasil | 
+            <span class="text-danger" > +55 (67) 3231 8436 </span>
+          </div>
+          <p class="mb-5">
+            O Instituto Moinho Cultural Sul-Americano (IMC) é uma instituição não governamental, sem fins lucrativos, que tem como missão a diminuição da vulnerabilidade de crianças e adolescentes em região de fronteira através do acesso a bens culturais e conhecimento tecnológico. Atende hoje 290 crianças e adolescentes dos municípios de Corumbá, Ladário/MS, e das cidades bolivianas de Puerto Suarez e Puerto Quijarro, com aulas diárias de música, dança, tecnologia, apoio escolar, idiomas, educação ambiental e patrimonial, no contraturno da escola regular em um ciclo com oito anos de duração. Os familiares dos participantes e a Comunidade participam de cursos de geração de renda e economia criativa promovidos pela instituição. Em 2015, com onze anos de atividades ininterruptas, o Moinho inspirou duas cidades Ladário/MS e Puerto Suarez/Bolívia a criar Projetos de Políticas Públicas baseadas nas ações desenvolvidas pelo Moinho. Além disso, vários participantes foram absorvidos pelo mercado de trabalho não só nas áreas fins da instituição, como também em outros cursos superiores, influenciados pela formação cidadã aqui adquirida.
+          </p>
+        </div>
+        <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/IMCultural/?ref=hl">
+                <span class="fa-stack fa-lg facebook">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/channel/UCLq5EXr1orgvK1H3SzSmo2g">
+                <span class="fa-stack fa-lg youtube">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="Evento">
+        <div class="row"> 
+          <div class="col-12">
+            <h1 class="text-warning">
+              Eventos
+            </h1>
+          </div>
+          <div class="col-6">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1 yellow">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small>Donec id elit non mi porta.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1 yellow">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small class="text-muted">Donec id elit non mi porta.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1 yellow">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small class="text-muted">Donec id elit non mi porta.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1 yellow">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small class="text-muted">Donec id elit non mi porta.</small>
+              </a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="month bg-warning"> 
+              <ul style="list-style-type: none">
+                  <li class="prev">&#10094;</li>
+                  <li class="next">&#10095;</li>
+                <li>Março<br><span style="font-size:18px">2018</span></li>
+              </ul>
+            </div>
+            
+            <ul class="weekdays">
+              <li>Seg</li>
+              <li>Ter</li>
+              <li>Qua</li>
+              <li>Qui</li>
+              <li>Sex</li>
+              <li>Sa</li>
+              <li>Dom</li>
+            </ul>
+            
+            <ul class="days"> 
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li><a href="" class="nav-link"><span class="active">10</span></a></li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li>22</li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
+</html>
