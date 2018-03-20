@@ -172,6 +172,10 @@
         top: 100%;
         height: 10%;
       }
+
+      input {
+          margin-bottom: 10px
+      }
     </style>
   </head>
 
@@ -239,75 +243,87 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="Sobre">
         <div class="row">
-            <h1 class="col-sm-12 text-success">
+            <h1 class="col-md-12 text-success">
                 Participantes
             </h1>
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <br>
                 <h4 class="text-success">
-                    Inscrição
+                    Matrícula
                 </h4>
                 <form>
                     <div id="carouselExampleControls" class="carousel slide" data-wrap="false" data-interval="100000">
                         <div class="carousel-inner" >
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-sm-5">
+                                    <div class="col-md-6">
+                                        <!-- Participante -->
                                         <label for="exampleFormControlInput1">Nome</label>
                                         <input type="text" class="form-control" id="nome" placeholder="Insira o nome do participante">
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">Idade</label>
-                                        <input type="number" value="8" min="1" max="100" class="form-control" id="idade">
-                                    </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-md-3">
+                                        <!-- Data de Nacimento Participante-->
                                         <label for="exampleFormControlInput1">Data de nascimento</label>
                                         <input type="date" class="form-control" id="nascimento">
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">Sexo</label>
-                                        <input type="text" class="form-control" id="sexo" placeholder="Sexo">
-                                    </div>
-
-                                    <!-- Nova Linha -->
-                                    <div class="col-sm-4">
-                                        <label for="exampleFormControlInput1">Endereço</label>
+                                    <div class="col-md-3">
+                                        <!-- CPF Participante -->
+                                        <label for="exampleFormControlInput1">CPF</label>
                                         <input type="text" class="form-control" id="endereco">
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">Bairro</label>
-                                        <input type="text" class="form-control" id="bairro">
+
+                                    <!-- Segunda linha -->
+                                    <div class="col-md-6">
+                                        <!-- Responsável 1 -->
+                                        <label for="exampleFormControlInput1">Nome do Responsável</label>
+                                        <input type="text" class="form-control" id="mae" placeholder="Insira o nome da mãe">
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">Município</label>
-                                        <input type="text" class="form-control" id="municipio">
+                                    <div class="col-md-3">
+                                        <!-- Data de Nacimento Responsável 1-->
+                                        <label for="exampleFormControlInput1">Data de nascimento</label>
+                                        <input type="date" class="form-control" id="nascimentoR1">
+                                        <!-- Data de Nacimento reaponsável 2-->
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">UF</label>
-                                        <input type="text" class="form-control" id="uf">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">País</label>
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-md-3">
+                                        <!-- CPF Responsável 1 -->
+                                        <label for="exampleFormControlInput1">CPF</label>
+                                        <input type="text" class="form-control" id="enderecoR1">      
                                     </div>
 
-                                    <!-- Nova linha -->
-                                    <div class="col-sm-5">
-                                        <label for="exampleFormControlInput1">Mãe</label>
-                                        <input type="text" class="form-control" id="mae" placeholder="Insira o nome da mãe">
-                                        </div>
-                                    <div class="col-sm-5">
-                                        <label for="exampleFormControlInput1">Pai</label>
+                                    <!-- Terceira linha -->
+
+                                    <div class="col-md-6">
+                                        <!-- Responsável 2 -->
+                                        <label for="exampleFormControlInput1">Nome do Responsável</label>
                                         <input type="text" class="form-control" id="pai" placeholder="Insira o nome do pai">
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="exampleFormControlInput1">Nacionalidade</label>
-                                        <input type="text" class="form-control" id="nacionalidade">
+                                    <div class="col-md-3">
+                                        <!-- Data de Nacimento reaponsável 2-->
+                                        <label for="exampleFormControlInput1">Data de nascimento</label>
+                                        <input type="date" class="form-control" id="nascimentoR2">
                                     </div>
+                                    <div class="col-md-3">
+                                        <!-- CPF Responsável 2 -->
+                                        <label for="exampleFormControlInput1">CPF</label>
+                                        <input type="text" class="form-control" id="enderecoR2">
+                                    </div>
+
+                                    <!-- Quarta linha -->
+                                    <div class="col-md-6">
+                                        <!-- Data de inscrição-->
+                                        <label for="exampleFormControlInput1">Data de inscrição</label>
+                                        <input type="date" class="form-control" id="data_inscricao">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Data de avaliação-->
+                                        <label for="exampleFormControlInput1">Data de Avaliação</label>
+                                        <input type="date" class="form-control" id="data_avaliacao">
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-md-6">
                                     <label for="exampleFormControlSelect1">Turma</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                         <option>1 - A</option>
@@ -317,7 +333,7 @@
                                         <option>3 - B</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-md-6">
                                     <label for="exampleFormControlSelect1">Período</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                         <option>Matutino</option>
@@ -357,7 +373,7 @@
                 <br>
                 <br>
             </div>
-            <div class="col-sm-6" style="text-align: right">
+            <div class="col-md-6" style="text-align: right">
                 <br>
                 <h4 class="text-success">
                     Lista de Participantes Regulares
@@ -477,7 +493,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-6" style="text-align: left">
+            <div class="col-md-6" style="text-align: left">
                 <br>
                 <h4 class="text-danger">
                     Lista de Participantes Irregulares
