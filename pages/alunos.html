@@ -19,6 +19,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
@@ -161,6 +162,16 @@
           background: #ffc107;
           color: white !important
       }
+
+      .carousel-control-prev {
+        top: 100%;
+        height: 10%;
+      }
+
+      .carousel-control-next {
+        top: 100%;
+        height: 10%;
+      }
     </style>
   </head>
 
@@ -228,40 +239,363 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="Sobre">
         <div class="row">
-            <h1 class="col-12 text-success">
+            <h1 class="col-sm-12 text-success">
                 Participantes
             </h1>
-            <div class="col-4">
+            <div class="col-sm-12">
+                <br>
+                <h4 class="text-success">
+                    Inscrição
+                </h4>
                 <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <div id="carouselExampleControls" class="carousel slide" data-wrap="false" data-interval="100000">
+                        <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlInput1">Nome</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Insira o nome do participante">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">Idade</label>
+                                        <input type="number" value="8" min="1" max="100" class="form-control" id="idade">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="exampleFormControlInput1">Data de nascimento</label>
+                                        <input type="date" class="form-control" id="nascimento">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">Sexo</label>
+                                        <input type="text" class="form-control" id="sexo" placeholder="Sexo">
+                                    </div>
+
+                                    <!-- Nova Linha -->
+                                    <div class="col-sm-4">
+                                        <label for="exampleFormControlInput1">Endereço</label>
+                                        <input type="text" class="form-control" id="endereco">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">Município</label>
+                                        <input type="text" class="form-control" id="municipio">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">UF</label>
+                                        <input type="text" class="form-control" id="uf">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">País</label>
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+
+                                    <!-- Nova linha -->
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlInput1">Mãe</label>
+                                        <input type="text" class="form-control" id="mae" placeholder="Insira o nome da mãe">
+                                        </div>
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlInput1">Pai</label>
+                                        <input type="text" class="form-control" id="pai" placeholder="Insira o nome do pai">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleFormControlInput1">Nacionalidade</label>
+                                        <input type="text" class="form-control" id="nacionalidade">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleFormControlSelect1">Turma</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>1 - A</option>
+                                        <option>1 - B</option>
+                                        <option>2 - A</option>
+                                        <option>3 - A</option>
+                                        <option>3 - B</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleFormControlSelect1">Período</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Matutino</option>
+                                        <option>Vespertino</option>
+                                        <option>Noturno</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="right: 50%">
+                            <i class="fa fa-arrow-left fa-lg text-success icon" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <i class="fa fa-arrow-right fa-lg text-success icon" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </form>
+                <br>
+                <br>
+            </div>
+            <div class="col-sm-6" style="text-align: right">
+                <br>
+                <h4 class="text-success">
+                    Lista de Participantes Regulares
+                </h4>
+                <table class="table table-striped">
+                    <thead class="text-success">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-6" style="text-align: left">
+                <br>
+                <h4 class="text-danger">
+                    Lista de Participantes Irregulares
+                </h4>
+                <table class="table table-striped">
+                    <thead class="text-danger">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
       </section>
